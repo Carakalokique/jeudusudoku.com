@@ -1,7 +1,7 @@
 import { Cell, Group } from "./Cell.js";
 
 let difficulty =
-  document.querySelector('meta[name="sudoku-difficulty"]')?.content || "easy";
+  document.querySelector('meta[name="sudoku-difficulty"]')?.content || "facile";
 let maxMistakes = 3;
 
 let noteMode = false;
@@ -230,18 +230,18 @@ function winGame(win = true) {
   setTimeout(() => {
     if (win) {
       document.getElementById("popup").style.display = "flex";
-      document.getElementById("popup-title").innerText = "Congrats";
+      document.getElementById("popup-title").innerText = "Félicitations";
       document.getElementById(
         "popup-message"
-      ).innerText = `Congrats! You solved this ${difficulty} puzzle in ${secondsToTimeString(
+      ).innerText = `Félicitations ! Vous avez résolu ce puzzle ${difficulty} en ${secondsToTimeString(
         timeElapsed2
       )}.`;
     } else {
       document.getElementById("popup").style.display = "flex";
-      document.getElementById("popup-title").innerText = "Game Over";
+      document.getElementById("popup-title").innerText = "Perdu";
       document.getElementById(
         "popup-message"
-      ).innerText = `You have made ${maxMistakes} mistakes and lost this game.`;
+      ).innerText = `Vous avez fait ${maxMistakes} erreurs et avez perdu la partie.`;
     }
   });
 }

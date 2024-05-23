@@ -209,8 +209,8 @@ export class Group {
 
 const difficulties = {
   test: 0.1,
-  easy: 0.4,
-  medium: 0.5,
-  hard: 0.6,
-  evil: 0.7,
+  facile: 0.4,
+  moyen: 0.5,
+  difficile: 0.6,
+  diabolique: 0.7,
 };

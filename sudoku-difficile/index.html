@@ -9,7 +9,7 @@
       name="description"
       content="La version difficile de notre Sudoku gratuit en ligne. Techniques expliquées pour le Sudoku difficile !"
     />
-    <meta name="sudoku-difficulty" content="hard" />
+    <meta name="sudoku-difficulty" content="difficile" />
   </head>
   <style>
     /* Most important layout rules repeated here to improve SEO */
@@ -58,22 +58,22 @@
     <nav class="container">
       <div class="text-content">
         <div class="difficulty-mobile">
-          Difficulty:
+          Niveau:
           <select id="difficulty-select">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-            <option value="evil">Evil</option>
+            <option value="easy">Facile</option>
+            <option value="medium">Moyen</option>
+            <option value="hard">Difficile</option>
+            <option value="evil">Diabolique</option>
           </select>
         </div>
         <div class="difficulty-desktop">
-          Difficulty:
-          <a id="url-easy" href="../sudoku-easy">Easy</a>
-          <a id="url-medium" href="../sudoku-medium">Medium</a>
-          <a id="url-hard" href="../sudoku-hard">Hard</a>
-          <a id="url-evil" href="../sudoku-evil">Evil</a>
+          Niveau:
+          <a id="url-easy" href="../sudoku-facile">Facile</a>
+          <a id="url-medium" href="../sudoku-moyen">Moyen</a>
+          <a id="url-hard" href="../sudoku-difficile">Difficile</a>
+          <a id="url-evil" href="../sudoku-diabolique">Diabolique</a>
         </div>
-        <div>Mistakes <span id="mistakes"></span></div>
+        <div>Erreurs <span id="mistakes"></span></div>
         <div>
           <span id="time-elapsed"></span>
         </div>
@@ -84,9 +84,9 @@
       <div class="keyboard">
         <div class="type">
           <div class="button button-left selected" id="mode-button-normal">
-            Pen
+            Stylo
           </div>
-          <div class="button button-right" id="mode-button-note">Pencil</div>
+          <div class="button button-right" id="mode-button-note">Crayon</div>
         </div>
         <div class="keys" id="keyboard-keys">
           <div class="button">1</div>
@@ -219,11 +219,11 @@
     </div>
     <div class="overlay" id="popup">
       <div class="window">
-        <p class="title" id="popup-title">Congrats</p>
+        <p class="title" id="popup-title">Félicitations</p>
         <p class="message" id="popup-message"></p>
         <br />
         <p>
-          <button id="play-again-button">Play another Sudoku</button>
+          <button id="play-again-button">Nouvelle partie</button>
         </p>
       </div>
     </div>
