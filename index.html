@@ -60,18 +60,18 @@
         <div class="difficulty-mobile">
           Niveau:
           <select id="difficulty-select">
-            <option value="easy">Facile</option>
-            <option value="medium">Moyen</option>
-            <option value="hard">Difficile</option>
-            <option value="evil">Diabolique</option>
+            <option value="facile">Facile</option>
+            <option value="moyen">Moyen</option>
+            <option value="difficile">Difficile</option>
+            <option value="diabolique">Diabolique</option>
           </select>
         </div>
         <div class="difficulty-desktop">
           Niveau:
-          <a id="url-easy" href="./sudoku-facile">Facile</a>
-          <a id="url-medium" href="./sudoku-moyen">Moyen</a>
-          <a id="url-hard" href="./sudoku-difficile">Difficile</a>
-          <a id="url-evil" href="./sudoku-diabolique">Diabolique</a>
+          <a id="url-facile" href="./sudoku-facile">Facile</a>
+          <a id="url-moyen" href="./sudoku-moyen">Moyen</a>
+          <a id="url-difficile" href="./sudoku-difficile">Difficile</a>
+          <a id="url-diabolique" href="./sudoku-diabolique">Diabolique</a>
         </div>
         <div>Erreurs <span id="mistakes"></span></div>
         <div>
@@ -105,55 +105,60 @@
     <div class="container">
       <div class="text-content">
         <h1>Un Sudoku gratuit en ligne et en français</h1>
-        <h2>Quelles sont les règles du sudoku?</h2>
+        <h2>Quelles sont les règles du sudoku ?</h2>
         <p>
-          The sudoku grid consists of eighty-one squares in a nine by nine grid.
-          To solve the sudoku, each square in the grid must contain a number
-          between one and nine, with the following conditions:
+          La grille de sudoku se compose de 81 carrés dans une grille de neuf
+          par neuf. Pour résoudre le sudoku, chaque case de la grille doit
+          contenir un nombre compris entre un et neuf, avec les conditions
+          suivantes :
         </p>
         <ul>
           <li>
-            Each row of nine cells must contain each of the numbers from 1 to 9
-            once and only once.
+            Chaque ligne de neuf cases doit contenir chacun des chiffres de 1 à
+            9 une fois et une seule fois.
           </li>
           <li>
-            Each column of nine cells must contain each of the numbers from 1 to
-            9 once and only once.
+            Chaque colonne de neuf cases doit contenir chacun des chiffres de 1
+            à 9 une fois et une seule fois.
           </li>
           <li>
-            Each of the nine 3 by 3 boxes of nine cells must contain each of the
-            numbers from 1 to 9 once and only once.
+            Chacun des neuf blocs de 3 par 3 cases doit contenir chacun des
+            chiffres de 1 à 9 une fois et une seule fois.
           </li>
         </ul>
         <p>
-          The sudoku starts with a partially filled grid and you must complete
-          the grid while following the rules above. If you complete the grid,
-          you've solved the sudoku.
+          Le sudoku commence avec une grille partiellement remplie et vous devez
+          compléter la grille en respectant les règles ci-dessus. Si vous
+          complétez la grille, vous avez résolu le sudoku.
         </p>
-        <p>Each sudoku on this site has one and only one unique solution.</p>
-        <h3>Write notes with a pencil</h3>
+        <p>Chaque sudoku sur ce site a une et une seule solution unique.</p>
+        <h3>Écrire des notes au crayon</h3>
         <p>
-          Some people like to write small pencil numbers in each cell to
-          indicate what numbers are possible in that cell. If you fill all the
-          cells with their possible values, the answer may quickly become
-          apparent. Particularly if some cells only have one possible value.
-          Such cells are called an "Open Single"
+          Certaines personnes aiment écrire de petits chiffres au crayon dans
+          chaque case pour indiquer quels chiffres sont possibles dans cette
+          case. Si vous remplissez toutes les cases avec leurs valeurs
+          possibles, la réponse peut rapidement devenir apparente. En
+          particulier si certaines cases n'ont qu'une seule valeur possible. Ces
+          cases sont appelées un "singleton nu".
         </p>
-        <h2>Sudoku tips and tricks</h2>
+        <h2>Conseils et astuces pour le sudoku</h2>
         <p>
-          There are a number of techniques for solving sudoku. They vary in
-          complexity and ease of application but all have one thing in common -
-          they aim to narrow the range of possible values in one or more of the
-          cells in the sudoku. If, by applying the rules of sudoku, we can
-          reduce the possible values in an empty cell to just one, we can enter
-          that value in the cell, confident in the knowledge that it is correct.
+          Il existe un certain nombre de techniques pour résoudre les sudokus.
+          Elles varient en complexité et en facilité d'application, mais toutes
+          ont un point commun : elles visent à réduire la gamme des valeurs
+          possibles dans une ou plusieurs cases du sudoku. Si, en appliquant les
+          règles du sudoku, nous pouvons réduire les valeurs possibles dans une
+          case vide à une seule, nous pouvons entrer cette valeur dans la case,
+          confiants qu'elle est correcte.
         </p>
         <p>
-          The most common of these techniques are described on this website
-          (under the grid when you select a difficulty). If you're new to
-          sudoku, take a look at the beginners techniques then try some of our
-          <a href="https://strictlysudoku.com/sudoku-easy">easy sudoku</a>. More
-          techniques for advanced players will be presented here soon.
+          Les techniques les plus courantes sont décrites sur ce site (sous la
+          grille lorsque vous sélectionnez une difficulté). Si vous êtes nouveau
+          dans le sudoku, jetez un coup d'œil aux techniques pour débutants,
+          puis essayez certains de nos
+          <a href="https://jeudusudoku.com/sudoku-facile">sudokus faciles</a>.
+          Plus de techniques pour les joueurs avancés seront bientôt présentées
+          ici.
         </p>
         <!-- <img src="example.png" alt="sudoku board" width="271" height="271" /> -->
       </div>

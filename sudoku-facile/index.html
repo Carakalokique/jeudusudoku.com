@@ -60,18 +60,18 @@
         <div class="difficulty-mobile">
           Niveau:
           <select id="difficulty-select">
-            <option value="easy">Facile</option>
-            <option value="medium">Moyen</option>
-            <option value="hard">Difficile</option>
-            <option value="evil">Diabolique</option>
+            <option value="facile">Facile</option>
+            <option value="moyen">Moyen</option>
+            <option value="difficile">Difficile</option>
+            <option value="diabolique">Diabolique</option>
           </select>
         </div>
         <div class="difficulty-desktop">
           Niveau:
-          <a id="url-easy" href="../sudoku-facile">Facile</a>
-          <a id="url-medium" href="../sudoku-moyen">Moyen</a>
-          <a id="url-hard" href="../sudoku-difficile">Difficile</a>
-          <a id="url-evil" href="../sudoku-diabolique">Diabolique</a>
+          <a id="url-facile" href="../sudoku-facile">Facile</a>
+          <a id="url-moyen" href="../sudoku-moyen">Moyen</a>
+          <a id="url-difficile" href="../sudoku-difficile">Difficile</a>
+          <a id="url-diabolique" href="../sudoku-diabolique">Diabolique</a>
         </div>
         <div>Erreurs <span id="mistakes"></span></div>
         <div>
@@ -106,70 +106,72 @@
       <div class="text-content">
         <h1>Sudoku facile pour les débutants avec techniques et conseils</h1>
         <p>
-          The most common technique to solve an easy Sudoku is the Open Single
-          technique. If you're new to sudoku, take a look at this technique
-          below. You’ll need to master it before moving on to more difficult
-          puzzles.
+          La technique la plus courante pour résoudre un Sudoku facile est la
+          technique du Singleton Nu. Si vous êtes nouveau dans le sudoku, jetez
+          un coup d'œil à cette technique ci-dessous. Vous devrez la maîtriser
+          avant de passer à des puzzles plus difficiles.
         </p>
-        <h2>Open Single (A technique for beginners)</h2>
+        <h2>Singleton Nu (Une technique pour débutants)</h2>
         <p>
-          Sometimes there's a square in the sudoku where only one number is
-          allowed. Consider the highlighted cell in this sudoku grid below; what
-          numbers could it contain? Under the rules of sudoku, no row, column or
-          block may contain the same number twice.
+          Parfois, il y a une case dans le sudoku où un seul chiffre est
+          possible. Considérez la case mise en surbrillance dans cette grille de
+          sudoku ci-dessous ; quels chiffres pourrait-elle contenir ? Selon les
+          règles du sudoku, aucune ligne, colonne ou bloc ne peut contenir le
+          même chiffre deux fois.
         </p>
         <img
-          src="../assets/strictlysudoku-opensingle-easy1.gif"
-          alt="Open Single Sudoku technique example for beginners"
+          src="../assets/jeudusudoku-singletonnu-facile1.gif"
+          alt="Exemple de technique de singleton nu pour les débutants"
           width="271"
           height="271"
         />
         <p>
-          The block containing the highlighted cell already contains the numbers
-          2, 4, 7 and 9 so none of these numbers are allowed in the cell.
-          Similarly, the column containing the cell contains the numbers 1, 2,
-          4, 6, 7 and 9 so these numbers aren't allowed either, and the row
-          containing the cell has the numbers 2, 3, 5, 7 and 9 so these numbers
-          are also banned from the cell.
+          Le bloc contenant la case mise en surbrillance contient déjà les
+          chiffres 2, 4, 7 et 9, donc aucun de ces chiffres n'est autorisé dans
+          la case. De même, la colonne contenant la case contient les chiffres
+          1, 2, 4, 6, 7 et 9, donc ces chiffres ne sont pas autorisés non plus,
+          et la ligne contenant la case a les chiffres 2, 3, 5, 7 et 9, donc ces
+          chiffres sont également interdits dans la case.
         </p>
         <p>
-          With all these banned numbers, there's only one number that is allowed
-          in the cell and that's the number 8. So we can place an 8 in the cell.
-          This is the open single.
+          Avec tous ces chiffres interdits, il n'y a qu'un seul chiffre autorisé
+          dans la case, et c'est le chiffre 8. Nous pouvons donc placer un 8
+          dans la case. C'est le singleton nu.
         </p>
         <p>
-          Now look further down the same column to the cell highlighted in the
-          next image. What numbers could this cell contain? Look at the box, row
-          and column containing this cell and you'll notice that the numbers 1,
-          2, 3, 4, 6, 7, 8, and 9 are all banned. So the only number allowed in
-          this cell is 5.
+          Maintenant, regardez plus bas dans la même colonne la case mise en
+          surbrillance dans l'image suivante. Quels chiffres pourrait-elle
+          contenir ? Regardez le bloc, la ligne et la colonne contenant cette
+          case et vous remarquerez que les chiffres 1, 2, 3, 4, 6, 7, 8, et 9
+          sont tous interdits. Donc, le seul chiffre autorisé dans cette case
+          est 5.
         </p>
         <img
-          src="../assets/strictlysudoku-opensingle-easy2.gif"
-          alt="Open Single Sudoku technique example for beginners"
+          src="../assets/jeudusudoku-singletonnu-facile2.gif"
+          alt="Exemple de technique de singleton nu pour les débutants"
           width="271"
           height="271"
         />
         <p>
-          Having placed the 5, there's only one cell left in this column, so
-          that's easy - it must be a 3 because that is the only number not yet
-          used in the column.
+          Après avoir placé le 5, il ne reste qu'une seule case dans cette
+          colonne, donc c'est facile - elle doit être un 3 car c'est le seul
+          chiffre qui n'a pas encore été utilisé dans la colonne.
         </p>
         <img
-          src="../assets/strictlysudoku-opensingle-easy3.gif"
-          alt="Open Single Sudoku technique example for beginners"
+          src="../assets/jeudusudoku-singletonnu-facile3.gif"
+          alt="Exemple de technique de singleton nu pour les débutants"
           width="271"
           height="271"
         />
         <p>
-          Looking around the cells in this sudoku, you'll find more open singles
-          in the cells highlighted, and after you've completed these cells more
-          open singles will become available.
+          En regardant autour des cases dans ce sudoku, vous trouverez plus de
+          singletons nus dans les cases mises en surbrillance, et après avoir
+          complété ces cases, d'autres singletons nus deviendront disponibles.
         </p>
         <p>
-          This is a fairly easy sudoku and can be completed using only the open
-          single technique, although sometimes the open singles may be hard to
-          find.
+          C'est un sudoku assez facile et peut être complété en utilisant
+          uniquement la technique du singleton nu, bien que parfois les
+          singletons nus puissent être difficiles à trouver.
         </p>
       </div>
     </div>

@@ -60,18 +60,18 @@
         <div class="difficulty-mobile">
           Niveau:
           <select id="difficulty-select">
-            <option value="easy">Facile</option>
-            <option value="medium">Moyen</option>
-            <option value="hard">Difficile</option>
-            <option value="evil">Diabolique</option>
+            <option value="facile">Facile</option>
+            <option value="moyen">Moyen</option>
+            <option value="difficile">Difficile</option>
+            <option value="diabolique">Diabolique</option>
           </select>
         </div>
         <div class="difficulty-desktop">
           Niveau:
-          <a id="url-easy" href="../sudoku-facile">Facile</a>
-          <a id="url-medium" href="../sudoku-moyen">Moyen</a>
-          <a id="url-hard" href="../sudoku-difficile">Difficile</a>
-          <a id="url-evil" href="../sudoku-diabolique">Diabolique</a>
+          <a id="url-facile" href="../sudoku-facile">Facile</a>
+          <a id="url-moyen" href="../sudoku-moyen">Moyen</a>
+          <a id="url-difficile" href="../sudoku-difficile">Difficile</a>
+          <a id="url-diabolique" href="../sudoku-diabolique">Diabolique</a>
         </div>
         <div>Erreurs <span id="mistakes"></span></div>
         <div>
@@ -106,114 +106,119 @@
       <div class="text-content">
         <h1>Sudoku difficile avec techniques expliquées</h1>
         <p>
-          The Open Singles and Hidden Singles techniques can only get you so far
-          when solving hard puzzles. You'll need to think about various number
-          possibilities for various cells. That's where the next technique comes
-          in. Once you have found all the singles, use this technique to move
-          forward on the puzzle.
+          Les techniques de Singletons Nus et Singletons Cachés peuvent vous
+          aider jusqu'à un certain point dans la résolution des puzzles
+          difficiles. Vous devrez réfléchir à diverses possibilités de chiffres
+          pour différentes cases. C'est là qu'intervient la prochaine technique.
+          Une fois que vous avez trouvé tous les singletons, utilisez cette
+          technique pour progresser dans le puzzle.
         </p>
-        <h2>Row/Column & Block Interactions</h2>
-        <p>Let's take a look at the following grid.</p>
+        <h2>Interactions Lignes/Colonnes et Blocs</h2>
+        <p>Regardons la grille suivante.</p>
         <img
-          src="../assets/strictlysudoku-row-column-hard1.gif"
-          alt="Row/Column & Block Interactions Sudoku technique example"
+          src="../assets/jeudusudoku-ligne-colonne-difficile1.gif"
+          alt="Exemple de technique d'interactions Lignes/Colonnes et Blocs de Sudoku"
           width="271"
           height="271"
         />
         <p>
-          I've already filled in some of the cells using the
-          <a href="https://strictlysudoku.com/sudoku-easy">open single</a> and
-          <a href="https://strictlysudoku.com/sudoku-easy">hidden single</a>
-          techniques. But now there are no more singles so I need another
-          technique.
+          J'ai déjà rempli certaines cases en utilisant les techniques de
+          <a href="https://jeudusudoku.com/sudoku-facile">singleton nu</a> et
+          <a href="https://jeudusudoku.com/sudoku-moyen">singleton caché</a>.
+          Mais maintenant, il n'y a plus de singletons, donc j'ai besoin d'une
+          autre technique.
         </p>
         <p>
-          I've used the pencil tool to list all the possible values for each
-          cell according to the rules of Sudoku. This will help me find the more
-          complex interactions between the rows, columns and blocks in the
-          sudoku.
+          J'ai utilisé l'outil crayon pour lister toutes les valeurs possibles
+          pour chaque case selon les règles du Sudoku. Cela m'aidera à trouver
+          les interactions plus complexes entre les lignes, les colonnes et les
+          blocs du sudoku.
         </p>
         <p>
-          Take a look at the second block down on the left side. Which cells in
-          this block can contain the number 8? There's only two such cells, and
-          they're both in the leftmost column of the sudoku. One of these two
-          cells must contain an 8 because there must be exactly one 8 in the
-          block.
+          Regardez le deuxième bloc en partant du haut sur le côté gauche.
+          Quelles cases dans ce bloc peuvent contenir le chiffre 8 ? Il n'y a
+          que deux cases de ce type, et elles sont toutes les deux dans la
+          colonne la plus à gauche du sudoku. L'une de ces deux cases doit
+          contenir un 8 car il doit y avoir exactement un 8 dans le bloc.
         </p>
         <img
-          src="../assets/strictlysudoku-row-column-hard2.gif"
-          alt="Row/Column & Block Interactions Sudoku technique example"
-          width="271"
-          height="271"
-        />
-
-        <p>
-          But there must also be exactly one 8 in the leftmost column and since
-          both of these cells are in the leftmost column, whichever contains the
-          8 that will be the 8 in this column. As a result, no other cells in
-          the leftmost column may contain the number 8. So we can remove the 8
-          from other cells in this column.
-        </p>
-        <p>This is the basic interaction between blocks and rows or columns.</p>
-        <img
-          src="../assets/strictlysudoku-row-column-hard3.gif"
-          alt="Row/Column & Block Interactions Sudoku technique example"
+          src="../assets/jeudusudoku-ligne-colonne-difficile2.gif"
+          alt="Exemple de technique d'interactions Lignes/Colonnes et Blocs de Sudoku"
           width="271"
           height="271"
         />
         <p>
-          Having removed the 8 as a possible value in the other cells in the
-          leftmost column, we have revealed a hidden single in the second row
-          down. The highlighted cell must contain an 8.
+          Mais il doit également y avoir exactement un 8 dans la colonne la plus
+          à gauche et comme ces deux cases sont dans la colonne la plus à
+          gauche, celle qui contient le 8 sera le 8 de cette colonne. Par
+          conséquent, aucune autre case dans la colonne la plus à gauche ne peut
+          contenir le chiffre 8. Donc, nous pouvons enlever le 8 des autres
+          cases de cette colonne.
         </p>
         <p>
-          You can enter the 8 and then continue to complete the sudoku - all you
-          need to complete it are open singles and hidden singles. But I'm going
-          to use the sudoku to illustrate some more interactions between rows or
-          columns and blocks.
-        </p>
-
-        <p>
-          The example above shows how a restriction in the possible cells for a
-          value in a block (in this case the 8) can help us remove some
-          possibilities from a column. The same can also happen between a block
-          and a row.
-        </p>
-        <p>
-          Further, a restriction in a row or column may help us to limit the
-          possibilities in an intersecting block.
-        </p>
-
-        <p>
-          Look at the second row down in the sudoku. The only two cells in this
-          row that may contain the number 1 are both in the top left block.
-          Since one of these two cells must contain a 1, no other cells in the
-          block may contain a 1. So we can eliminate 1 as a possibility in all
-          other cells in this block.
+          C'est l'interaction de base entre les blocs et les lignes ou colonnes.
         </p>
         <img
-          src="../assets/strictlysudoku-row-column-hard4.gif"
-          alt="Row/Column & Block Interactions Sudoku technique example"
+          src="../assets/jeudusudoku-ligne-colonne-difficile3.gif"
+          alt="Exemple de technique d'interactions Lignes/Colonnes et Blocs de Sudoku"
           width="271"
           height="271"
         />
         <p>
-          Another quick example - look at the eighth row down. Only two cells in
-          this row can contain the number 3, and both of these are in the
-          bottom-right block of cells. So we can eliminate 3 as a possibility
-          from other cells in this block.
+          Après avoir enlevé le 8 comme valeur possible dans les autres cases de
+          la colonne la plus à gauche, nous avons révélé un singleton caché dans
+          la deuxième ligne en partant du bas. La case mise en surbrillance doit
+          contenir un 8.
+        </p>
+        <p>
+          Vous pouvez entrer le 8 et ensuite continuer à compléter le sudoku -
+          tout ce dont vous avez besoin pour le compléter sont des singletons
+          nus et cachés. Mais je vais utiliser le sudoku pour illustrer d'autres
+          interactions entre les lignes ou colonnes et les blocs.
+        </p>
+        <p>
+          L'exemple ci-dessus montre comment une restriction dans les cases
+          possibles pour une valeur dans un bloc (dans ce cas le 8) peut nous
+          aider à supprimer certaines possibilités d'une colonne. La même chose
+          peut également se produire entre un bloc et une ligne.
+        </p>
+        <p>
+          De plus, une restriction dans une ligne ou une colonne peut nous aider
+          à limiter les possibilités dans un bloc intersectant.
+        </p>
+        <p>
+          Regardez la deuxième ligne en partant du haut dans le sudoku. Les
+          seules deux cases dans cette ligne qui peuvent contenir le chiffre 1
+          sont toutes les deux dans le bloc supérieur gauche. Puisque l'une de
+          ces deux cases doit contenir un 1, aucune autre case dans le bloc ne
+          peut contenir un 1. Donc, nous pouvons éliminer 1 comme possibilité
+          dans toutes les autres cases de ce bloc.
         </p>
         <img
-          src="../assets/strictlysudoku-row-column-hard5.gif"
-          alt="Row/Column & Block Interactions Sudoku technique example"
+          src="../assets/jeudusudoku-ligne-colonne-difficile4.gif"
+          alt="Exemple de technique d'interactions Lignes/Colonnes et Blocs de Sudoku"
           width="271"
           height="271"
         />
         <p>
-          Row/column and block interactions don't always lead straight to an
-          open or hidden single - the last two examples don't. But if the
-          interactions enable us to restrict further the possible values for
-          cells they might still help towards solving the sudoku.
+          Un autre exemple rapide - regardez la huitième ligne en partant du
+          haut. Seules deux cases dans cette ligne peuvent contenir le chiffre
+          3, et ces deux cases sont dans le bloc inférieur droit de cases. Donc,
+          nous pouvons éliminer 3 comme possibilité dans les autres cases de ce
+          bloc.
+        </p>
+        <img
+          src="../assets/jeudusudoku-ligne-colonne-difficile5.gif"
+          alt="Exemple de technique d'interactions Lignes/Colonnes et Blocs de Sudoku"
+          width="271"
+          height="271"
+        />
+        <p>
+          Les interactions entre les lignes/colonnes et les blocs ne mènent pas
+          toujours directement à un singleton nu ou caché - les deux derniers
+          exemples ne le font pas. Mais si les interactions nous permettent de
+          restreindre davantage les valeurs possibles pour les cases, elles
+          peuvent tout de même aider à résoudre le sudoku.
         </p>
       </div>
     </div>
@@ -247,18 +252,6 @@
             <a href="mailto:contact@jeudusudoku.com">Email</a>
           </p>
         </div>
-        <!-- <div>
-          <h3>URLS 3</h3>
-          <p>
-            <a href="./">Test url</a>
-          </p>
-          <p>
-            <a href="./">Test url</a>
-          </p>
-          <p>
-            <a href="./">Test url</a>
-          </p>
-        </div> -->
       </div>
     </footer>
   </body>

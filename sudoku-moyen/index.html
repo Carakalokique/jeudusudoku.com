@@ -60,18 +60,18 @@
         <div class="difficulty-mobile">
           Niveau:
           <select id="difficulty-select">
-            <option value="easy">Facile</option>
-            <option value="medium">Moyen</option>
-            <option value="hard">Difficile</option>
-            <option value="evil">Diabolique</option>
+            <option value="facile">Facile</option>
+            <option value="moyen">Moyen</option>
+            <option value="difficile">Difficile</option>
+            <option value="diabolique">Diabolique</option>
           </select>
         </div>
         <div class="difficulty-desktop">
           Niveau:
-          <a id="url-easy" href="../sudoku-facile">Facile</a>
-          <a id="url-medium" href="../sudoku-moyen">Moyen</a>
-          <a id="url-hard" href="../sudoku-difficile">Difficile</a>
-          <a id="url-evil" href="../sudoku-diabolique">Diabolique</a>
+          <a id="url-facile" href="../sudoku-facile">Facile</a>
+          <a id="url-moyen" href="../sudoku-moyen">Moyen</a>
+          <a id="url-difficile" href="../sudoku-difficile">Difficile</a>
+          <a id="url-diabolique" href="../sudoku-diabolique">Diabolique</a>
         </div>
         <div>Erreurs <span id="mistakes"></span></div>
         <div>
@@ -106,86 +106,89 @@
       <div class="text-content">
         <h1>Strictement Sudoku - Sudoku moyen avec techniques de résolution</h1>
         <p>
-          The second most common technique to solve a Sudoku puzzle is the
-          Hidden Single technique. You've now mastered the Open Single technique
-          and you can start tackling more difficult puzzles. Before going to
-          hard sudoku puzzles, you'll need to understand and practice this
-          technique. Let's get into it.
+          La deuxième technique la plus courante pour résoudre un puzzle Sudoku
+          est la technique du Singleton Caché. Vous avez maintenant maîtrisé la
+          technique du Singleton Nu et vous pouvez commencer à aborder des
+          puzzles plus difficiles. Avant de passer aux puzzles de sudoku
+          difficiles, vous devez comprendre et pratiquer cette technique.
+          Allons-y.
         </p>
-        <h2>Hidden Single technique</h2>
+        <h2>Technique du Singleton Caché</h2>
         <p>
-          Sometimes there's only one square in a group where a particular number
-          is allowed. Under the rules of sudoku, every row, column and block
-          must contain each number exactly once.
+          Parfois, il n'y a qu'une seule case dans un groupe où un chiffre
+          particulier est autorisé. Selon les règles du sudoku, chaque ligne,
+          colonne et bloc doit contenir chaque chiffre exactement une fois.
         </p>
         <p>
-          Take a look at the lower-right block of nine cells in this sudoku
-          below. One of these nine cells must contain the number 1, but which
-          one? It can't be the empty cell in the far right column, because this
-          column already contains a 1 and the number is not allowed to appear
-          twice in any column, row or block. The next column in also contains a
-          1, so the empty cell in this column is also banned.
+          Regardez le bloc inférieur droit de neuf cases dans ce sudoku
+          ci-dessous. L'une de ces neuf cases doit contenir le chiffre 1, mais
+          laquelle ? Cela ne peut pas être la case vide dans la colonne la plus
+          à droite, car cette colonne contient déjà un 1 et le chiffre n'est pas
+          autorisé à apparaître deux fois dans une colonne, une ligne ou un
+          bloc. La colonne suivante contient également un 1, donc la case vide
+          dans cette colonne est également interdite.
         </p>
         <img
-          src="../assets/strictlysudoku-hiddensingle-medium1.gif"
-          alt="Hidden Single Sudoku technique example"
+          src="../assets/jeudusudoku-singletoncache-moyen1.gif"
+          alt="Exemple de technique de singleton caché de Sudoku"
           width="271"
           height="271"
         />
         <p>
-          This leaves two empty cells in the seventh column. But the bottom row
-          in the sudoku also already contains a number 1 so the empty cells in
-          this row are also banned.
+          Cela laisse deux cases vides dans la septième colonne. Mais la ligne
+          du bas dans le sudoku contient également déjà un chiffre 1, donc les
+          cases vides dans cette ligne sont également interdites.
         </p>
         <p>
-          This leaves just one cell in the lower-right block, the highlighted
-          cell, that is allowed to contain a 1. This is the hidden single and we
-          can place a 1 in it.
+          Cela laisse une seule case dans le bloc inférieur droit, la case mise
+          en surbrillance, qui est autorisée à contenir un 1. C'est le singleton
+          caché et nous pouvons y placer un 1.
         </p>
         <p>
-          Now look at the middle left block of three cells. Where does the
-          number 2 go in this block? The two highlighted cells already contain a
-          2, banning the number from other cells in the second column and the
-          fourth row of the sudoku. This leaves just one cell in the middle-left
-          block where the number 2 is allowed to go, the highlighted cell, so we
-          place a 2 in it.
+          Maintenant, regardez le bloc central gauche de trois cases. Où va le
+          chiffre 2 dans ce bloc ? Les deux cases mises en surbrillance
+          contiennent déjà un 2, interdisant le chiffre dans les autres cases de
+          la deuxième colonne et de la quatrième ligne du sudoku. Cela laisse
+          une seule case dans le bloc central gauche où le chiffre 2 est
+          autorisé, la case mise en surbrillance, donc nous y plaçons un 2.
         </p>
         <img
-          src="../assets/strictlysudoku-hiddensingle-medium2.gif"
-          alt="Hidden Single Sudoku technique example"
+          src="../assets/jeudusudoku-singletoncache-moyen2.gif"
+          alt="Exemple de technique de singleton caché de Sudoku"
           width="271"
           height="271"
         />
         <p>
-          So far, we've applied the hidden single to blocks, using numbers in
-          rows and columns that intersect with the block to find where a number
-          isn't allowed to go. We can also apply the hidden single technique to
-          rows and columns.
+          Jusqu'à présent, nous avons appliqué le singleton caché aux blocs, en
+          utilisant les chiffres dans les lignes et les colonnes qui croisent le
+          bloc pour trouver où un chiffre n'est pas autorisé. Nous pouvons
+          également appliquer la technique du singleton caché aux lignes et aux
+          colonnes.
         </p>
         <p>
-          Look at the second row in the sudoku. This row must contain a 3 in
-          exactly one cell. There are four empty cells in the row but which of
-          these are allowed to contain the number 3? Three of them are in the
-          centre-top block of nine cells, and this block already contains the
-          number 3 in another cell. So none of these three cells may contain a
-          3. That leaves just one cell in the second row where a 3 is allowed,
-          the highlighted cell, so we place a 3 here.
+          Regardez la deuxième ligne dans le sudoku. Cette ligne doit contenir
+          un 3 dans exactement une case. Il y a quatre cases vides dans la
+          ligne, mais lesquelles sont autorisées à contenir le chiffre 3 ? Trois
+          d'entre elles se trouvent dans le bloc central supérieur de neuf
+          cases, et ce bloc contient déjà le chiffre 3 dans une autre case.
+          Donc, aucune de ces trois cases ne peut contenir un 3. Cela laisse une
+          seule case dans la deuxième ligne où un 3 est autorisé, la case mise
+          en surbrillance, donc nous y plaçons un 3.
         </p>
         <img
-          src="../assets/strictlysudoku-hiddensingle-medium3.gif"
-          alt="Hidden Single Sudoku technique example"
+          src="../assets/jeudusudoku-singletoncache-moyen3.gif"
+          alt="Exemple de technique de singleton caché de Sudoku"
           width="271"
           height="271"
         />
-
         <p>
-          This sudoku can be completed using only the hidden single technique,
-          although sometimes they'll be hard to find and you may find it easier
-          to use the
-          <a href="https://strictlysudoku.com/sudoku-easy"
-            >open single technique</a
+          Ce sudoku peut être complété en utilisant uniquement la technique du
+          singleton caché, bien que parfois ils soient difficiles à trouver et
+          que vous puissiez trouver plus facile d'utiliser la
+          <a href="https://jeudusudoku.com/sudoku-facile"
+            >technique du singleton nu</a
           >
-          when the hidden singles are being elusive.
+          lorsque les singletons cachés sont difficiles à repérer.
         </p>
       </div>
     </div>
